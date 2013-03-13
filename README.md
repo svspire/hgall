@@ -2,6 +2,16 @@ hgall
 ====
 Script that allows maintaining multiple hg repo's at once.
 
+I can't take full credit - this script is a highly modified adaption of an equivalent script for SVN, the origins of which I have unfortunately forgotten, and been unable to trace.
+
+Install
+========
+Suggestion:
+1. Download the script or clone the repo to whatever location you see fit.
+2. Symlink the hgall.sh script to e.g. /usr/local/bin/hgall  
+3. Make it executable with chmod u+x
+4. Profit
+
 Usage summary: 
 =====
 hgall [-a|_] [ list | help | do | inc | out | fetch | cm '[message]' | push | sum | st | log [args] | update [args] | branch [args] | io | prompt | @ | ss ]
