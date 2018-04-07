@@ -10,17 +10,17 @@ fi
 # Find all the directories that are mercurial repos
 case $1 in
     _)
-    dirs=(`find .  -name ".hg" -depth 2 -wholename "*\_*"`)
+    dirs=(`find . -maxdepth 2  -name ".hg" -wholename "*\_*"`)
     hgcmd="$2"
     hgargs="$3 $4 $5 $6 $7 $8"
     ;;
     -a)
-    dirs=(`find . -name ".hg" -depth 2`)
+    dirs=(`find . -maxdepth 2 -name ".hg"`)
     hgcmd="$2"
     hgargs="$3 $4 $5 $6 $7 $8"
     ;;
     *)
-    dirs=(`find .  -name ".hg" -depth 2 -not -wholename "*\_*"`)
+    dirs=(`find .  -maxdepth 2 -name ".hg" -not -wholename "*\_*"`)
     hgcmd="$1"
     hgargs="$2 $3 $4 $5 $6 $7"
     ;;
